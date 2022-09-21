@@ -21,7 +21,7 @@ class CompanyService{
 
     public function update(array $data, $id){
         $company = Company::findOrFail($id);
-        $company->update();
+        $company->update($data);
         return $company;
     }
 

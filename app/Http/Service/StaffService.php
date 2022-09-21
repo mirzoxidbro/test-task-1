@@ -21,8 +21,8 @@ class StaffService {
 
     public function update(array $data, $id){
         $staff = Staff::findOrFail($id);
-
-        return $staff->update($data);
+        $staff->update($data);
+        return $staff;
     }
 
     public function destroy($id){
