@@ -17,7 +17,7 @@ class CompanyController extends Controller
     }
 
     public function index(){
-        $company = $this->servie->index();
+        $company = $this->service->index();
         return response()->json([
             'company' => $company
         ]);
@@ -32,15 +32,14 @@ class CompanyController extends Controller
     }
 
     public function show($id){
-        $servie = new CompanyService;
-        $company = $servie->show($id);
+        $company = $this->service->show($id);
         return response()->json([
             'company' => $company
         ]);
     }
 
     public function update(CompanyRequest $request, $id){
-        $company = $this->servie->update($request->validated(), $id);
+        $company = $this->service->update($request->validated(), $id);
 
         return response()->json([
             'company' => $company
@@ -48,7 +47,7 @@ class CompanyController extends Controller
     }
 
     public function destroy($id){
-        $company = $this->servie->destroy($id);
+        $company = $this->service->destroy($id);
         return response()->json([
             'message' => "company deleted successfully"
         ]);

@@ -24,8 +24,7 @@ class StaffRequest extends FormRequest
     public function rules()
     {
         return [
-            "name" => "required",
-            "passport" => "required|min:9|max:9"
+            "name" => "required"
         ];
     }
 }
