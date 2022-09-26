@@ -21,6 +21,9 @@ class AuthController extends Controller
                 'user' => $user,
                 'token' => $token,
             ]);
+            
+            $user->assignRole('company');
+
     }
 
     public function login(Request $request){

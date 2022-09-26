@@ -24,7 +24,15 @@ class StaffRequest extends FormRequest
     public function rules()
     {
         return [
-            "name" => "required"
+            "passport" => "required|string|max:9|min:9",
+            "name" => "required|string|max:255",
+            "surname" => "required|string|max:255",
+            "father_name" => "required|string|max:255",
+            "position" => "required|string|max:255",
+            "phone_number" => "required|string|max:255",
+            "address" => "required|string|max:255",
+            "company_id" => "required"
+
         ];
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StaffRequest;
 use App\Http\Service\StaffService;
+
 class StaffController extends Controller
 {
     protected $service;
@@ -15,9 +16,11 @@ class StaffController extends Controller
    
     public function index(){
         $staff = $this->service->index();
+        
         return response()->json([
-            'staff' => $staff
+            $staff    
         ]);
+
     }
 
     public function store(StaffRequest $request){

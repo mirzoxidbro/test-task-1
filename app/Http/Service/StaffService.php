@@ -2,12 +2,15 @@
 
 namespace App\Http\Service;
 
+use App\Models\Company;
 use App\Models\Staff;
 
 class StaffService {
 
     public function index(){
-        return Staff::get();
+
+    
+
     }
 
     public function store(array $data){
