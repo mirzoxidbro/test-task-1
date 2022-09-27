@@ -29,7 +29,7 @@ class StaffRequest extends FormRequest
             "surname" => "required|string|max:255",
             "father_name" => "required|string|max:255",
             "position" => "required|string|max:255",
-            "phone_number" => "required|string|max:255",
+            "phone_number" => "required|numeric",
             "address" => "required|string|max:255",
             "company_id" => "required"
 
