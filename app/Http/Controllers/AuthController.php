@@ -14,7 +14,7 @@ class AuthController extends Controller
                 "name" => $request->name,
                 "email" => $request->email,
                 "password" => Hash::make($request->password)
-            ]);
+            ])->assignRole('company');
 
             $token = $user->createToken('token')->plainTextToken;
             return response()->json([
@@ -22,8 +22,6 @@ class AuthController extends Controller
                 'token' => $token,
             ]);
             
-            $user->assignRole('company');
-
     }
 
     public function login(Request $request){

@@ -8,9 +8,12 @@ use App\Models\Staff;
 class StaffService {
 
     public function index(){
-
-    
-
+    $user = auth()->user();
+    if($user->hasRole('company')){
+        return $user->staff;
+    }else{
+        return Company::get();
+      }
     }
 
     public function store(array $data){

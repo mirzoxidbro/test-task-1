@@ -13,7 +13,7 @@ class Company extends Model
 
     public function staff() 
     {
-        return $this->hasMany(Staff::class);
+        return $this->hasMany(Staff::class, 'company_id', 'id');
     }
 
 }

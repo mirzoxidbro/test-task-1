@@ -11,6 +11,11 @@ class StaffController extends Controller
 
     public function __construct()
     {
+        // $this->middleware('staff-list')->only('index');
+        // $this->middleware('staff-show')->only('show');
+        // $this->middleware('staff-delete')->only('destroy');
+        // $this->middleware('staff-update')->only('update');
+        // $this->middleware('staff-store')->only('store');
         $this->service = new StaffService;
     }
    

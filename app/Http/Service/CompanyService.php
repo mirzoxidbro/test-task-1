@@ -2,13 +2,18 @@
 
 namespace App\Http\Service;
 
-use App\Http\Requests\CompanyRequest;
 use App\Models\Company;
+use Illuminate\Support\Facades\Auth;
 
 class CompanyService{
 
     public function index(){
+    $user = auth()->user();
+    if($user->hasRole('company')){
+        return $user->company;
+    }else{
         return Company::get();
+      }
     }
 
     public function store(array $data){

@@ -13,6 +13,12 @@ class CompanyController extends Controller
 
     public function __construct()
     {
+        // $this->middleware('company-list')->only('index');
+        // $this->middleware('company-show')->only('show');
+        // $this->middleware('company-delete')->only('destroy');
+        // $this->middleware('company-update')->only('update');
+        // $this->middleware('company-store')->only('store');
+        // $this->middleware(['permission:company-list|company-show|company-delete|company-update|company-store']);
         $this->service = new CompanyService;
     }
 
