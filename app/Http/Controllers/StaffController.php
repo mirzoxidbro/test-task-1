@@ -11,8 +11,6 @@ class StaffController extends Controller
 
     public function __construct()
     {
-    $this->middleware(['permission:staff-list|staff-show|staff-delete|staff-update|staff-store']);
-
         $this->service = new StaffService;
     }
    
