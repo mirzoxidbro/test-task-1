@@ -16,25 +16,25 @@ class RolePermissionSeeder extends Seeder
     public function run()
     {
         // reset cached roles and permissions
-        app()[\Spatie\Permission\PermissionRegistrar::class]
-                ->forgetCachedPermissions();
+        // app()[\Spatie\Permission\PermissionRegistrar::class]
+        //         ->forgetCachedPermissions();
 
         
 
-        Permission::create(['name' => 'company-list']);
-        Permission::create(['name' => 'company-store']);
-        Permission::create(['name' => 'company-show']);
-        Permission::create(['name' => 'company-update']);
-        Permission::create(['name' => 'company-delete']);
+        // Permission::create(['name' => 'company-list']);
+        // Permission::create(['name' => 'company-store']);
+        // Permission::create(['name' => 'company-show']);
+        // Permission::create(['name' => 'company-update']);
+        // Permission::create(['name' => 'company-delete']);
 
-        Permission::create(['name' => 'staff-list']);
-        Permission::create(['name' => 'staff-store']);
-        Permission::create(['name' => 'staff-show']);
-        Permission::create(['name' => 'staff-update']);
-        Permission::create(['name' => 'staff-delete']);
+        // Permission::create(['name' => 'staff-list']);
+        // Permission::create(['name' => 'staff-store']);
+        // Permission::create(['name' => 'staff-show']);
+        // Permission::create(['name' => 'staff-update']);
+        // Permission::create(['name' => 'staff-delete']);
 
-        Role::create(['name' => 'admin'])->givePermissionTo(Permission::all());
-        Role::create(['name' => 'company'])->givePermissionTo(Permission::all());
+        // Role::create(['name' => 'admin'])->givePermissionTo(Permission::all());
+        // Role::create(['name' => 'company'])->givePermissionTo(Permission::all());
 
 
     }
