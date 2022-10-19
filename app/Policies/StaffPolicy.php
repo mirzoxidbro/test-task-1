@@ -20,6 +20,7 @@ class StaffPolicy
     {
         $company = $user->company();
         return $company->id = $staff->company_id;
+        return $user->hasRole('admin');
     }
 
     /**
@@ -33,6 +34,7 @@ class StaffPolicy
     {
         $company = $user->company();
         return $company->id = $staff->company_id;
+        return $user->hasRole('admin');
     }
 
     /**
@@ -45,6 +47,7 @@ class StaffPolicy
     {
         $company = $user->company();
         return $company->id = $staff->company_id;
+        return $user->hasRole('admin');
     }
 
     /**
@@ -58,6 +61,7 @@ class StaffPolicy
     {
         $company = $user->company();
         return $company->id = $staff->company_id;
+        return $user->hasRole('admin');
     }
 
     /**
@@ -71,6 +75,7 @@ class StaffPolicy
     {
         $company = $user->company();
         return $company->id = $staff->company_id;
+        return $user->hasRole('admin');
     }
 
     /**
