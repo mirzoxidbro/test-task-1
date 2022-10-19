@@ -13,7 +13,7 @@ class StaffController extends Controller
     {
         $this->service = new StaffService;
     }
-   
+
     /**
      * @OA\Get(
      *      path="/api/staff",
