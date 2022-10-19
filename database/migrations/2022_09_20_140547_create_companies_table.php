@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('email');
             $table->string('website');
             $table->string('phone_number');
-            $table->unsignedBigInteger('user_id');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }
