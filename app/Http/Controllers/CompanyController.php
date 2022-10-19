@@ -13,7 +13,6 @@ class CompanyController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['permission:company-list|company-show|company-delete|company-update|company-store']);
         $this->service = new CompanyService;
     }
 
