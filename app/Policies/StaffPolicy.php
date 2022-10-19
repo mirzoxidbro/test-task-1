@@ -16,9 +16,10 @@ class StaffPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function viewAny(User $user)
+    public function viewAny(User $user, Staff $staff)
     {
-        //
+        $company = $user->company();
+        return $company->id = $staff->company_id;
     }
 
     /**
@@ -30,7 +31,8 @@ class StaffPolicy
      */
     public function view(User $user, Staff $staff)
     {
-        //
+        $company = $user->company();
+        return $company->id = $staff->company_id;
     }
 
     /**
@@ -39,9 +41,10 @@ class StaffPolicy
      * @param  \App\Models\User  $user
      * @return \Illuminate\Auth\Access\Response|bool
      */
-    public function create(User $user)
+    public function create(User $user, Staff $staff)
     {
-        //
+        $company = $user->company();
+        return $company->id = $staff->company_id;
     }
 
     /**
@@ -53,7 +56,8 @@ class StaffPolicy
      */
     public function update(User $user, Staff $staff)
     {
-        //
+        $company = $user->company();
+        return $company->id = $staff->company_id;
     }
 
     /**
@@ -65,7 +69,8 @@ class StaffPolicy
      */
     public function delete(User $user, Staff $staff)
     {
-        //
+        $company = $user->company();
+        return $company->id = $staff->company_id;
     }
 
     /**
