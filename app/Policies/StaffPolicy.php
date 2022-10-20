@@ -19,8 +19,12 @@ class StaffPolicy
     public function viewAny(User $user, Staff $staff)
     {
         $company = $user->company();
-        return $company->id = $staff->company_id;
-        return $user->hasRole('admin');
+        if($company->id = $staff->company_id || $user->hasRole('admin')){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     /**
@@ -33,8 +37,12 @@ class StaffPolicy
     public function view(User $user, Staff $staff)
     {
         $company = $user->company();
-        return $company->id = $staff->company_id;
-        return $user->hasRole('admin');
+        if($company->id = $staff->company_id || $user->hasRole('admin')){
+                return true;
+            }
+        else {
+                return false;
+        }
     }
 
     /**
@@ -46,8 +54,12 @@ class StaffPolicy
     public function create(User $user, Staff $staff)
     {
         $company = $user->company();
-        return $company->id = $staff->company_id;
-        return $user->hasRole('admin');
+        if($company->id = $staff->company_id || $user->hasRole('admin')){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     /**
@@ -60,8 +72,12 @@ class StaffPolicy
     public function update(User $user, Staff $staff)
     {
         $company = $user->company();
-        return $company->id = $staff->company_id;
-        return $user->hasRole('admin');
+        if($company->id = $staff->company_id || $user->hasRole('admin')){
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 
     /**
