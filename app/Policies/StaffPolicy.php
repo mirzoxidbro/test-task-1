@@ -17,13 +17,10 @@ class StaffPolicy
      * @return \Illuminate\Auth\Access\Response|bool
      */
     public function viewAny(User $user, Staff $staff)
-    {
+    {  
         $company = $user->company();
         if($company->id = $staff->company_id || $user->hasRole('admin')){
             return true;
-        }
-        else {
-            return false;
         }
     }
 
